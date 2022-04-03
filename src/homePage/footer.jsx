@@ -1,7 +1,7 @@
 function footer() {
-    return(
+    return (
         <div classname="footer">
-            <footer className="copyright">
+            <footer>
                 <p>T-Connect<strong>© 2022</strong></p>
             </footer>
         </div>

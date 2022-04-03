@@ -1,3 +1,4 @@
+
 import Navbar from "./navbar";
 import Footer from "./footer";
 import Profile from "./profile";
@@ -6,7 +7,8 @@ function home() {
         <Navbar />
         <Profile />
         <Footer />
-    </div>;
+    </div>
+
 }
 
 export default home;

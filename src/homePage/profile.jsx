@@ -6,9 +6,9 @@ function profile() {
     return (
         <Container>
             <Row>
-                <Col sm>
+                <Col sm><div class="card border-primary mb-3">
                     <Card>
-                        <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt=""/>
+                        <Card.Img variant="top" src="D:\Projects\tconnect\Images\dummy photos\t1.jpg" alt="" />
                         <Card.Body>
                             <Card.Title>Dummy Teacher 1</Card.Title>
                             <Card.Text>
@@ -20,66 +20,72 @@ function profile() {
                                         Database
                                     </li>
                                     <li>
-                                    Networking
+                                        Networking
                                     </li>
-                                         </ul>
+                                </ul>
+                                <a href="#" class="btn btn-primary">Write E-mail</a>
+                                <a href="#" class="btn btn-primary">Book an appointment</a>
                             </Card.Text>
                         </Card.Body>
-                    </Card>
+                    </Card></div>
                 </Col>
 
-                <Col sm>
+                <Col sm><div class="card border-primary mb-3">
                     <Card>
-                        <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt=""/>
+                        <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
                         <Card.Body>
-                            <Card.Title>Dummy Teacher 2</Card.Title>
-                            <Card.Text>
-                            <ul>
-                                    <li>
-                                        Ethical Hacking
-                                    </li>
-                                    <li>
-                                        SDLC
-                                    </li>
-                                    <li>
-                                    Soft skill
-                                    </li>
-                                         </ul>
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
-                </Col>
-
-                <Col sm>
-                    <Card>
-                        <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt=""/>
-                        <Card.Body>
-                            <Card.Title>Dummy Teachwer 3</Card.Title>
+                            <Card.Title>Dummy Teacher 1</Card.Title>
                             <Card.Text>
                                 <ul>
                                     <li>
-                                        Accountancy
+                                        Cyber Security
                                     </li>
                                     <li>
-                                        Business Lifestyle
+                                        Database
                                     </li>
                                     <li>
-                                        Data Science
+                                        Networking
                                     </li>
                                 </ul>
+                                <a href="#" class="btn btn-primary">Write E-mail</a>
+                                <a href="#" class="btn btn-primary">Book an appointment</a>
                             </Card.Text>
                         </Card.Body>
-                    </Card>
+                    </Card></div>
+                </Col>
+
+                <Col sm><div class="card border-primary mb-3">
+                    <Card>
+                        <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
+                        <Card.Body>
+                            <Card.Title>Dummy Teacher 1</Card.Title>
+                            <Card.Text>
+                                <ul>
+                                    <li>
+                                        Cyber Security
+                                    </li>
+                                    <li>
+                                        Database
+                                    </li>
+                                    <li>
+                                        Networking
+                                    </li>
+                                </ul>
+                                <a href="#" class="btn btn-primary">Write E-mail</a>
+                                <a href="#" class="btn btn-primary">Book an appointment</a>
+                            </Card.Text>
+                        </Card.Body>
+                    </Card></div>
                 </Col>
             </Row>
             <Row>
-                <Col sm>
+                <Col sm><div class="card border-primary mb-3">
                     <Card>
-                        <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt=""/>
+                        <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
                         <Card.Body>
-                            <Card.Title>Dummy Teacher 4</Card.Title>
+                            <Card.Title>Dummy Teacher 1</Card.Title>
                             <Card.Text>
-                            <ul>
+                                <ul>
                                     <li>
                                         Cyber Security
                                     </li>
@@ -87,20 +93,23 @@ function profile() {
                                         Database
                                     </li>
                                     <li>
-                                    Networking
+                                        Networking
                                     </li>
-                                         </ul>
+                                </ul>
+                                <a href="#" class="btn btn-primary">Write E-mail</a>
+                                <a href="#" class="btn btn-primary">Book an appointment</a>
                             </Card.Text>
                         </Card.Body>
-                    </Card>
+                    </Card></div>
                 </Col>
-                <Col sm>
+
+                <Col sm><div class="card border-primary mb-3">
                     <Card>
-                        <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt=""/>
+                        <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
                         <Card.Body>
-                            <Card.Title>Dummy Teacher 5</Card.Title>
+                            <Card.Title>Dummy Teacher 1</Card.Title>
                             <Card.Text>
-                            <ul>
+                                <ul>
                                     <li>
                                         Cyber Security
                                     </li>
@@ -108,20 +117,23 @@ function profile() {
                                         Database
                                     </li>
                                     <li>
-                                    Networking
+                                        Networking
                                     </li>
-                                         </ul>
+                                </ul>
+                                <a href="#" class="btn btn-primary">Write E-mail</a>
+                                <a href="#" class="btn btn-primary">Book an appointment</a>
                             </Card.Text>
                         </Card.Body>
-                    </Card>
+                    </Card></div>
                 </Col>
-                <Col sm>
+
+                <Col sm><div class="card border-primary mb-3">
                     <Card>
-                        <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt=""/>
+                        <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
                         <Card.Body>
-                            <Card.Title>Dummy Teacher 6</Card.Title>
+                            <Card.Title>Dummy Teacher 1</Card.Title>
                             <Card.Text>
-                            <ul>
+                                <ul>
                                     <li>
                                         Cyber Security
                                     </li>
@@ -129,22 +141,24 @@ function profile() {
                                         Database
                                     </li>
                                     <li>
-                                    Networking
+                                        Networking
                                     </li>
-                                         </ul>
+                                </ul>
+                                <a href="#" class="btn btn-primary">Write E-mail</a>
+                                <a href="#" class="btn btn-primary">Book an appointment</a>
                             </Card.Text>
                         </Card.Body>
-                    </Card>
+                    </Card></div>
                 </Col>
             </Row>
             <Row>
-                <Col sm>
+                <Col sm><div class="card border-primary mb-3">
                     <Card>
-                        <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt=""/>
+                        <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
                         <Card.Body>
-                            <Card.Title>Dummy Teacher 7</Card.Title>
+                            <Card.Title>Dummy Teacher 1</Card.Title>
                             <Card.Text>
-                            <ul>
+                                <ul>
                                     <li>
                                         Cyber Security
                                     </li>
@@ -152,20 +166,23 @@ function profile() {
                                         Database
                                     </li>
                                     <li>
-                                    Networking
+                                        Networking
                                     </li>
-                                         </ul>
+                                </ul>
+                                <a href="#" class="btn btn-primary">Write E-mail</a>
+                                <a href="#" class="btn btn-primary">Book an appointment</a>
                             </Card.Text>
                         </Card.Body>
-                    </Card>
+                    </Card></div>
                 </Col>
-                <Col sm>
+
+                <Col sm><div class="card border-primary mb-3">
                     <Card>
-                        <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt=""/>
+                        <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
                         <Card.Body>
-                            <Card.Title>Dummy Teacher 8</Card.Title>
+                            <Card.Title>Dummy Teacher 1</Card.Title>
                             <Card.Text>
-                            <ul>
+                                <ul>
                                     <li>
                                         Cyber Security
                                     </li>
@@ -173,20 +190,23 @@ function profile() {
                                         Database
                                     </li>
                                     <li>
-                                    Networking
+                                        Networking
                                     </li>
-                                         </ul>
+                                </ul>
+                                <a href="#" class="btn btn-primary">Write E-mail</a>
+                                <a href="#" class="btn btn-primary">Book an appointment</a>
                             </Card.Text>
                         </Card.Body>
-                    </Card>
+                    </Card></div>
                 </Col>
-                <Col sm>
+
+                <Col sm><div class="card border-primary mb-3">
                     <Card>
-                        <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt=""/>
+                        <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
                         <Card.Body>
-                            <Card.Title>Dummy Teacher 9</Card.Title>
+                            <Card.Title>Dummy Teacher 1</Card.Title>
                             <Card.Text>
-                            <ul>
+                                <ul>
                                     <li>
                                         Cyber Security
                                     </li>
@@ -194,12 +214,14 @@ function profile() {
                                         Database
                                     </li>
                                     <li>
-                                    Networking
+                                        Networking
                                     </li>
-                                         </ul>
+                                </ul>
+                                <a href="#" class="btn btn-primary">Write E-mail</a>
+                                <a href="#" class="btn btn-primary">Book an appointment</a>
                             </Card.Text>
                         </Card.Body>
-                    </Card>
+                    </Card></div>
                 </Col>
             </Row>
         </Container>
