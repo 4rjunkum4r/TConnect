@@ -1,15 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Navbar from './Navbar';
-import Profile from './Profile';
-import Footer from './Footer';
-import reportWebVitals from './reportWebVitals';
+import App from './App';
+import './index.css';
 
+import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <React.StrictMode>
-    <Navbar />
-    <Profile />
-    <Footer />
+   <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );
