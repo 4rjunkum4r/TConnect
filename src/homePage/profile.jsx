@@ -8,7 +8,7 @@ function profile() {
             <Row>
                 <Col sm><div class="card border-primary mb-3">
                     <Card>
-                        <Card.Img variant="top" src="D:\Projects\tconnect\Images\dummy photos\t1.jpg" alt="" />
+                        <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
                         <Card.Body>
                             <Card.Title>Dummy Teacher 1</Card.Title>
                             <Card.Text>
