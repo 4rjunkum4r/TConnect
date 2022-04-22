@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, } from "react-router-dom";
 import Logo from './logo.svg';
-import {Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -13,10 +13,10 @@ function App() {
         <div>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route path="/Home" element={<Home />} />
                     <Route path="/ContactUs" element={<ContactUs />} />
                     <Route path="/LogIn" element={<LogIn />} />
-                    <Route path="/StudentProfile" element={<StudentProfile/>}/>
+                    <Route path="/Profile" element={<YourProfile />} />
                 </Routes>
             </BrowserRouter>
         </div>
@@ -32,336 +32,230 @@ function Home() {
 }
 function Navbar() {
     return (
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand " href="#"><img src={Logo} width="50" height="50" class="d-inline-block align-top rounded" alt="T Connect Logo" />
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span></button>
-
-            <div class="navbar-collapse collapse " id="navbarTogglerDemo01">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#"><strong><Link to="/">Home</Link></strong><span class="sr-only">(current)</span></a>
+        <nav className="navbar navbar-custom navbar-expand-md">
+            <div className="container-fluid">
+            <a class="navbar-brand" href="#"><img src={Logo} className="nav-brand-img align-top rounded" alt="T Connect Logo" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fa fa-angle-double-down"></span>
+        </button>
+            <div className="navbar-collapse collapse position-relative" id="navbar">
+                <ul className="navbar-nav me-auto">
+                    <li className="mx-1">
+                        <Link to="/Home">
+                            <button className="btn btn-success nav-item-custom active">Home</button>
+                        </Link>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><strong><Link to="/ContactUs">Contact Us</Link></strong></a>
+                    <li className="mx-1">
+                        <Link to="/ContactUs">
+                            <button className="btn btn-success nav-item-custom">Contact Us</button>
+                        </Link>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><strong><Link to="/StudentProfile">Profile</Link></strong></a>
+                    <li className="mx-1">
+                        <Link to="/Profile">
+                            <button className="btn btn-success nav-item-custom">Your Profile</button>
+                        </Link>
                     </li>
                 </ul>
-                <div>
-                    <form class="form-inline my-2 my-lg-0 d-flex">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                        <Link to="/LogIn"><button class="btn btn-outline-success my-2 my-sm-0">LogIn/Register</button></Link>
-                    </form>
-                </div>
+                <ul className="navbar-nav">
+                    <li className="nav-item mx-1">
+                        <form>
+                            <input class="form-control " type="search" placeholder="Search" aria-label="Search" />
+                        </form>
+                    </li>
+                    <li className="nav-item mx-1">
+                        <button class="btn btn-success nav-item-custom" type="submit">Search</button>
+                    </li>
+                    <li className="nav-item mx-1">
+                        <Link to="/LogIn"><button className="btn btn-success nav-item-custom">LogIn/Register</button></Link>
+                    </li>
+                </ul>
+            </div>
             </div>
         </nav>
     );
 }
 function Profile() {
     return (
-        <Container>
-            <Row>
-                <Col sm><div class="card border-primary mb-3">
-                    <Card>
-                        <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
-                        <Card.Body>
-                            <Card.Title>Dummy Teacher 1</Card.Title>
-                            <Card.Text>
-                                <ul>
-                                    <li>
-                                        Cyber Security
-                                    </li>
-                                    <li>
-                                        Database
-                                    </li>
-                                    <li>
-                                        Networking
-                                    </li>
-                                </ul>
-                                <a href="#" class="btn btn-primary">Write E-mail</a>
-                                <a href="#" class="btn btn-2 btn-primary">Book an appointment</a>
-                            </Card.Text>
-                        </Card.Body>
-                    </Card></div>
-                </Col>
-
-                <Col sm><div class="card border-primary mb-3">
-                <Card>
-                        <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
-                        <Card.Body>
-                            <Card.Title>Dummy Teacher 1</Card.Title>
-                            <Card.Text>
-                                <ul>
-                                    <li>
-                                        Cyber Security
-                                    </li>
-                                    <li>
-                                        Database
-                                    </li>
-                                    <li>
-                                        Networking
-                                    </li>
-                                </ul>
-                                <a href="#" class="btn btn-primary">Write E-mail</a>
-                                <a href="#" class="btn btn-2 btn-primary">Book an appointment</a>
-                            </Card.Text>
-                        </Card.Body>
-                    </Card></div>
-                </Col>
-
-                <Col sm><div class="card border-primary mb-3">
-                <Card>
-                        <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
-                        <Card.Body>
-                            <Card.Title>Dummy Teacher 1</Card.Title>
-                            <Card.Text>
-                                <ul>
-                                    <li>
-                                        Cyber Security
-                                    </li>
-                                    <li>
-                                        Database
-                                    </li>
-                                    <li>
-                                        Networking
-                                    </li>
-                                </ul>
-                                <a href="#" class="btn btn-primary">Write E-mail</a>
-                                <a href="#" class="btn btn-2 btn-primary">Book an appointment</a>
-                            </Card.Text>
-                        </Card.Body>
-                    </Card></div>
-                </Col>
-            </Row>
-            <Row>
-                <Col sm><div class="card border-primary mb-3">
-                <Card>
-                        <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
-                        <Card.Body>
-                            <Card.Title>Dummy Teacher 1</Card.Title>
-                            <Card.Text>
-                                <ul>
-                                    <li>
-                                        Cyber Security
-                                    </li>
-                                    <li>
-                                        Database
-                                    </li>
-                                    <li>
-                                        Networking
-                                    </li>
-                                </ul>
-                                <a href="#" class="btn btn-primary">Write E-mail</a>
-                                <a href="#" class="btn btn-2 btn-primary">Book an appointment</a>
-                            </Card.Text>
-                        </Card.Body>
-                    </Card></div>
-                </Col>
-
-                <Col sm><div class="card border-primary mb-3">
-                <Card>
-                        <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
-                        <Card.Body>
-                            <Card.Title>Dummy Teacher 1</Card.Title>
-                            <Card.Text>
-                                <ul>
-                                    <li>
-                                        Cyber Security
-                                    </li>
-                                    <li>
-                                        Database
-                                    </li>
-                                    <li>
-                                        Networking
-                                    </li>
-                                </ul>
-                                <a href="#" class="btn btn-primary">Write E-mail</a>
-                                <a href="#" class="btn btn-2 btn-primary">Book an appointment</a>
-                            </Card.Text>
-                        </Card.Body>
-                    </Card></div>
-                </Col>
-
-                <Col sm><div class="card border-primary mb-3">
-                <Card>
-                        <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
-                        <Card.Body>
-                            <Card.Title>Dummy Teacher 1</Card.Title>
-                            <Card.Text>
-                                <ul>
-                                    <li>
-                                        Cyber Security
-                                    </li>
-                                    <li>
-                                        Database
-                                    </li>
-                                    <li>
-                                        Networking
-                                    </li>
-                                </ul>
-                                <a href="#" class="btn btn-primary">Write E-mail</a>
-                                <a href="#" class="btn btn-2 btn-primary">Book an appointment</a>
-                            </Card.Text>
-                        </Card.Body>
-                    </Card></div>
-                </Col>
-            </Row>
-            <Row>
-                <Col sm><div class="card border-primary mb-3">
-                <Card>
-                        <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
-                        <Card.Body>
-                            <Card.Title>Dummy Teacher 1</Card.Title>
-                            <Card.Text>
-                                <ul>
-                                    <li>
-                                        Cyber Security
-                                    </li>
-                                    <li>
-                                        Database
-                                    </li>
-                                    <li>
-                                        Networking
-                                    </li>
-                                </ul>
-                                <a href="#" class="btn btn-primary">Write E-mail</a>
-                                <a href="#" class="btn btn-2 btn-primary">Book an appointment</a>
-                            </Card.Text>
-                        </Card.Body>
-                    </Card></div>
-                </Col>
-
-                <Col sm><div class="card border-primary mb-3">
-                <Card>
-                        <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
-                        <Card.Body>
-                            <Card.Title>Dummy Teacher 1</Card.Title>
-                            <Card.Text>
-                                <ul>
-                                    <li>
-                                        Cyber Security
-                                    </li>
-                                    <li>
-                                        Database
-                                    </li>
-                                    <li>
-                                        Networking
-                                    </li>
-                                </ul>
-                                <a href="#" class="btn btn-primary">Write E-mail</a>
-                                <a href="#" class="btn btn-2 btn-primary">Book an appointment</a>
-                            </Card.Text>
-                        </Card.Body>
-                    </Card></div>
-                </Col>
-
-                <Col sm><div class="card border-primary mb-3">
-                <Card>
-                        <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
-                        <Card.Body>
-                            <Card.Title>Dummy Teacher 1</Card.Title>
-                            <Card.Text>
-                                <ul>
-                                    <li>
-                                        Cyber Security
-                                    </li>
-                                    <li>
-                                        Database
-                                    </li>
-                                    <li>
-                                        Networking
-                                    </li>
-                                </ul>
-                                <a href="#" class="btn btn-primary">Write E-mail</a>
-                                <a href="#" class="btn btn-2 btn-primary">Book an appointment</a>
-                            </Card.Text>
-                        </Card.Body>
-                    </Card></div>
-                </Col>
-            </Row>
-        </Container>
-    );
-}
-function Footer() {
-    return (
-        <div className="footer">
-            <footer>
-                <p>T-Connect<strong>© 2022</strong></p>
-            </footer>
-        </div>
-    );
-}
-function LogIn() {
-    return (
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="modal-box">
-                    <div class="modal-dialog" role="document">
-                                <div class="modal-content clearfix">
-                                    <div class="modal-body">
-                                        <h3 class="title">Account Login/ Registration</h3>
-                                        <p class="description">Login here using your Registration Number & Password</p>
-                                        <div class="form-group">
-                                            <span class="input-icon"><i class="fa fa-user"></i></span>
-                                            <input type="text" class="form-control" placeholder="Enter registration number" />
-                                        </div>
-                                        <div class="form-group">
-                                            <span class="input-icon"><i class="fas fa-key"></i></span>
-                                            <input type="password" class="form-control" placeholder="Enter your password" />
-                                        </div>
-                                        <div class="form-group checkbox">
-                                            <input type="checkbox" />
-                                            <label>Remember Me</label>
-                                        </div>
-                                        <a href="#" class="forgot-pass">Forgot Password?</a>
-                                        <button id="myButton" class="btn">Login/Register</button>
-                                    </div>
-                                </div>
+        <div className="container my-3">
+            <div className="row">
+                <div className="col">
+                    <div className="card border-custom">
+                        <div className="card">
+                            <img className="card-img-top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
+                            <div className="card-body">
+                                <h5 className="card-title">Dummy Teacher 1</h5>
+                                <p className="card-text">
+                                    <ul>
+                                        <li>
+                                            Cyber Security
+                                        </li>
+                                        <li>
+                                            Database
+                                        </li>
+                                        <li>
+                                            Networking
+                                        </li>
+                                    </ul>
+                                    <a href="#" className="btn btn-primary">Write E-mail</a>
+                                    <a href="#" className="btn btn-2 btn-primary">Book an appointment</a>
+                                </p>
                             </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="col">
+                        <div className="card border-custom">
+                            <div className="card" />
+                            <img className="card-img-top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
+                            <div className="card-body">
+                                <h5 className="card-title">Dummy Teacher 1</h5>
+                                <p className="card-text">
+                                    <ul>
+                                        <li>
+                                            Cyber Security</li>
+                                        <li>
+                                            Database</li>
+                                        <li>
+                                            Networking
+                                        </li>
+                                    </ul>
+                                    <a href="#" className="btn btn-primary">Write E-mail</a>
+                                    <a href="#" className="btn btn-2 btn-primary">Book an appointment</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="col">
+                        <div className="card border-custom">
+                            <div className="card" />
+                            <img className="card-img-top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
+                            <div className="card-body">
+                                <h5 className="card-title">Dummy Teacher 1</h5>
+                                <p className="card-text">
+                                    <ul>
+                                        <li>
+                                            Cyber Security</li>
+                                        <li>
+                                            Database</li>
+                                        <li>
+                                            Networking
+                                        </li>
+                                    </ul>
+                                    <a href="#" className="btn btn-primary">Write E-mail</a>
+                                    <a href="#" className="btn btn-2 btn-primary">Book an appointment</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="col">
+                        <div className="card border-custom">
+                            <div className="card" />
+                            <img className="card-img-top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
+                            <div className="card-body">
+                                <h5 className="card-title">Dummy Teacher 1</h5>
+                                <p className="card-text">
+                                    <ul>
+                                        <li>
+                                            Cyber Security</li>
+                                        <li>
+                                            Database</li>
+                                        <li>
+                                            Networking
+                                        </li>
+                                    </ul>
+                                    <a href="#" className="btn btn-primary">Write E-mail</a>
+                                    <a href="#" className="btn btn-2 btn-primary">Book an appointment</a>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    );
-}
-function ContactUs() {
-    return (
-        <div>
-            <h1>You could reach us in given Contact</h1>
-            <ul>
-                <li>
-                    <strong>
-                        Tel: +91 XXXXXXXXXX
-                    </strong>
-                </li>
-                <li>
-                    <strong>
-                        Email:- tconnectcontactus@gmail.com
-                    </strong>
-                </li>
-                <li>
-                    <strong>
-                        Facebook:- *Here will be facebook icon*
-                    </strong>
-                </li>
-                <li>
-                    <strong>
-                        <a href="https://wa.me/917076279481">Whatsapp Me</a>
-                    </strong>
-                </li>
-            </ul>
-        </div>
-    );
-}
-function StudentProfile(){
-    return(
-        <h1 className="Student"> This must be Student Profile</h1>
-    );
+            );
 }
 
-export default App;
+function Footer() {
+    return (
+            <div className="footer">
+                <footer>
+                    <p>T-Connect<strong>© 2022</strong></p>
+                </footer>
+            </div>
+            );
+}
+            function LogIn() {
+    return (
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-12">
+                        <div className="modal-box">
+                            <div className="modal-dialog" role="document">
+                                <div className="modal-content clearfix">
+                                    <div className="modal-body">
+                                        <h3 className="title">Account Login/ Registration</h3>
+                                        <p className="description">Login here using your Registration Number & Password</p>
+                                        <div className="form-group">
+                                            <span className="input-icon"><i className="fa fa-user"></i></span>
+                                            <input type="text" className="form-control" placeholder="Enter registration number" />
+                                        </div>
+                                        <div className="form-group">
+                                            <span className="input-icon"><i className="fas fa-key"></i></span>
+                                            <input type="password" className="form-control" placeholder="Enter your password" />
+                                        </div>
+                                        <div className="form-group checkbox">
+                                            <input type="checkbox" />
+                                            <label>Remember Me</label>
+                                        </div>
+                                        <a href="#" className="forgot-pass">Forgot Password?</a>
+                                        <button id="myButton" className="btn">Login/Register</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            );
+}
+            function ContactUs() {
+    return (
+            <div>
+                <h1>You could reach us in given Contact</h1>
+                <ul>
+                    <li>
+                        <strong>
+                            Tel: +91 XXXXXXXXXX
+                        </strong>
+                    </li>
+                    <li>
+                        <strong>
+                            Email:- tconnectcontactus@gmail.com
+                        </strong>
+                    </li>
+                    <li>
+                        <strong>
+                            Facebook:- *Here will be facebook icon*
+                        </strong>
+                    </li>
+                    <li>
+                        <strong>
+                            <a href="https://wa.me/917076279481">Whatsapp Me</a>
+                        </strong>
+                    </li>
+                </ul>
+            </div>
+            );
+}
+            function YourProfile() {
+    return (
+            <div className="container">
+                <img className="yp" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png"></img>
+            </div>
+
+            );
+}
+
+            export default App;
