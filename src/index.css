@@ -1,6 +1,7 @@
 .logo {
-    width: 70px; 
+    width: 70px;
 }
+
 .modal-box {
     font-family: 'Poppins', sans-serif;
 }
@@ -217,44 +218,50 @@
     }
 }
 
-.Student{
+.Student {
     background-color: red;
 }
 
-.btn-2{
-    margin-left:80px;
+.btn-2 {
+    border: 1px solid gray;
+    font-size: 0.875;
+    word-wrap: break-word;
+    max-width: 100%;
 }
-.footer{
+
+.footer {
     text-align: center;
     background: #8566aa;
 }
 
-.navbar-custom{
-   background-color: #A85CF9; 
+.navbar-custom {
+    background-color: #A85CF9;
 }
-.nav-item-custom{
+
+.nav-item-custom {
     background-color: #000000;
     border-radius: 10px;
     color: white;
 }
 
-.card{
+.card {
     background-color: #6FDFDF;
 }
 
-.body{
+.body {
     background-color: #A85CF9;
 }
 
-.border-custom{
+.border-custom {
     border: 10px solid blue;
 }
 
-.nav-brand-img{
+.nav-brand-img {
     width: 100px;
     height: auto;
 }
-.fa-angle-double-down{
+
+.fa-angle-double-down {
     font-size: 50px;
     color: red;
 }

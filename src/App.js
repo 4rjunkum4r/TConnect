@@ -96,8 +96,8 @@ function Profile() {
                                             Networking
                                         </li>
                                     </ul>
-                                    <a href="#" className="btn btn-primary">Write E-mail</a>
-                                    <a href="#" className="btn btn-2 btn-primary">Book an appointment</a>
+                                    <a href="#" className="btn btn-2 btn-primary">Write E-mail</a>
+                                    <a href="#" className="btn btn-2 my-2 mx-2 btn-primary">Book an appointment</a>
                                 </p>
                             </div>
                             </div>
