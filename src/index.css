@@ -220,3 +220,16 @@
 .Student{
     background-color: red;
 }
+
+.btn-2{
+    margin-left:80px;
+}
+
+.navbar-brand{
+    margin-left: 50px;
+}
+
+.footer{
+    text-align: center;
+    background: rgb(65, 91, 239);
+}

@@ -6,6 +6,7 @@ import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import './index';
 
 function App() {
     return (
@@ -32,13 +33,12 @@ function Home() {
 function Navbar() {
     return (
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand " href="#"><img src={Logo} width="100" height="100" class="d-inline-block align-top rounded" alt="T Connect Logo" />
+            <a class="navbar-brand " href="#"><img src={Logo} width="50" height="50" class="d-inline-block align-top rounded" alt="T Connect Logo" />
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span></button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="navbar-collapse collapse " id="navbarTogglerDemo01">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="#"><strong><Link to="/">Home</Link></strong><span class="sr-only">(current)</span></a>
@@ -54,7 +54,7 @@ function Navbar() {
                     <form class="form-inline my-2 my-lg-0 d-flex">
                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                        <button class="btn btn-outline-success my-2 my-sm-0"><Link to="/LogIn">LogIn/Register</Link></button>
+                        <Link to="/LogIn"><button class="btn btn-outline-success my-2 my-sm-0">LogIn/Register</button></Link>
                     </form>
                 </div>
             </div>
@@ -83,14 +83,14 @@ function Profile() {
                                     </li>
                                 </ul>
                                 <a href="#" class="btn btn-primary">Write E-mail</a>
-                                <a href="#" class="btn btn-primary">Book an appointment</a>
+                                <a href="#" class="btn btn-2 btn-primary">Book an appointment</a>
                             </Card.Text>
                         </Card.Body>
                     </Card></div>
                 </Col>
 
                 <Col sm><div class="card border-primary mb-3">
-                    <Card>
+                <Card>
                         <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
                         <Card.Body>
                             <Card.Title>Dummy Teacher 1</Card.Title>
@@ -107,14 +107,14 @@ function Profile() {
                                     </li>
                                 </ul>
                                 <a href="#" class="btn btn-primary">Write E-mail</a>
-                                <a href="#" class="btn btn-primary">Book an appointment</a>
+                                <a href="#" class="btn btn-2 btn-primary">Book an appointment</a>
                             </Card.Text>
                         </Card.Body>
                     </Card></div>
                 </Col>
 
                 <Col sm><div class="card border-primary mb-3">
-                    <Card>
+                <Card>
                         <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
                         <Card.Body>
                             <Card.Title>Dummy Teacher 1</Card.Title>
@@ -131,7 +131,7 @@ function Profile() {
                                     </li>
                                 </ul>
                                 <a href="#" class="btn btn-primary">Write E-mail</a>
-                                <a href="#" class="btn btn-primary">Book an appointment</a>
+                                <a href="#" class="btn btn-2 btn-primary">Book an appointment</a>
                             </Card.Text>
                         </Card.Body>
                     </Card></div>
@@ -139,7 +139,7 @@ function Profile() {
             </Row>
             <Row>
                 <Col sm><div class="card border-primary mb-3">
-                    <Card>
+                <Card>
                         <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
                         <Card.Body>
                             <Card.Title>Dummy Teacher 1</Card.Title>
@@ -156,14 +156,14 @@ function Profile() {
                                     </li>
                                 </ul>
                                 <a href="#" class="btn btn-primary">Write E-mail</a>
-                                <a href="#" class="btn btn-primary">Book an appointment</a>
+                                <a href="#" class="btn btn-2 btn-primary">Book an appointment</a>
                             </Card.Text>
                         </Card.Body>
                     </Card></div>
                 </Col>
 
                 <Col sm><div class="card border-primary mb-3">
-                    <Card>
+                <Card>
                         <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
                         <Card.Body>
                             <Card.Title>Dummy Teacher 1</Card.Title>
@@ -180,14 +180,14 @@ function Profile() {
                                     </li>
                                 </ul>
                                 <a href="#" class="btn btn-primary">Write E-mail</a>
-                                <a href="#" class="btn btn-primary">Book an appointment</a>
+                                <a href="#" class="btn btn-2 btn-primary">Book an appointment</a>
                             </Card.Text>
                         </Card.Body>
                     </Card></div>
                 </Col>
 
                 <Col sm><div class="card border-primary mb-3">
-                    <Card>
+                <Card>
                         <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
                         <Card.Body>
                             <Card.Title>Dummy Teacher 1</Card.Title>
@@ -204,7 +204,7 @@ function Profile() {
                                     </li>
                                 </ul>
                                 <a href="#" class="btn btn-primary">Write E-mail</a>
-                                <a href="#" class="btn btn-primary">Book an appointment</a>
+                                <a href="#" class="btn btn-2 btn-primary">Book an appointment</a>
                             </Card.Text>
                         </Card.Body>
                     </Card></div>
@@ -212,7 +212,7 @@ function Profile() {
             </Row>
             <Row>
                 <Col sm><div class="card border-primary mb-3">
-                    <Card>
+                <Card>
                         <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
                         <Card.Body>
                             <Card.Title>Dummy Teacher 1</Card.Title>
@@ -229,14 +229,14 @@ function Profile() {
                                     </li>
                                 </ul>
                                 <a href="#" class="btn btn-primary">Write E-mail</a>
-                                <a href="#" class="btn btn-primary">Book an appointment</a>
+                                <a href="#" class="btn btn-2 btn-primary">Book an appointment</a>
                             </Card.Text>
                         </Card.Body>
                     </Card></div>
                 </Col>
 
                 <Col sm><div class="card border-primary mb-3">
-                    <Card>
+                <Card>
                         <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
                         <Card.Body>
                             <Card.Title>Dummy Teacher 1</Card.Title>
@@ -253,14 +253,14 @@ function Profile() {
                                     </li>
                                 </ul>
                                 <a href="#" class="btn btn-primary">Write E-mail</a>
-                                <a href="#" class="btn btn-primary">Book an appointment</a>
+                                <a href="#" class="btn btn-2 btn-primary">Book an appointment</a>
                             </Card.Text>
                         </Card.Body>
                     </Card></div>
                 </Col>
 
                 <Col sm><div class="card border-primary mb-3">
-                    <Card>
+                <Card>
                         <Card.Img variant="top" src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png" alt="" />
                         <Card.Body>
                             <Card.Title>Dummy Teacher 1</Card.Title>
@@ -277,7 +277,7 @@ function Profile() {
                                     </li>
                                 </ul>
                                 <a href="#" class="btn btn-primary">Write E-mail</a>
-                                <a href="#" class="btn btn-primary">Book an appointment</a>
+                                <a href="#" class="btn btn-2 btn-primary">Book an appointment</a>
                             </Card.Text>
                         </Card.Body>
                     </Card></div>
@@ -288,7 +288,7 @@ function Profile() {
 }
 function Footer() {
     return (
-        <div>
+        <div className="footer">
             <footer>
                 <p>T-Connect<strong>© 2022</strong></p>
             </footer>
@@ -303,8 +303,6 @@ function LogIn() {
                     <div class="modal-box">
                     <div class="modal-dialog" role="document">
                                 <div class="modal-content clearfix">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                                        aria-hidden="true">×</span></button>
                                     <div class="modal-body">
                                         <h3 class="title">Account Login/ Registration</h3>
                                         <p class="description">Login here using your Registration Number & Password</p>
@@ -363,7 +361,6 @@ function ContactUs() {
 function StudentProfile(){
     return(
         <h1 className="Student"> This must be Student Profile</h1>
-        
     );
 }
 
