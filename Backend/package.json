@@ -1,0 +1,15 @@
+{
+  "name": "tconnect-backend",
+  "version": "1.0.0",
+  "description": "TConnect a web app to always be connected with your teacher",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.3.1"
+  }
+}
