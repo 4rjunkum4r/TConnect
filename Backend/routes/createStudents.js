@@ -3,6 +3,8 @@ const Students = require("../models/Students");
 const router = express.Router();
 const { body, validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const JWT_SECRET = "ProtectionofData";
 
 //Create a user using: POST "/api/auth/". Doesn't require Auth
 
@@ -22,24 +24,38 @@ router.post(
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
+    try {
+      let studentEmail = await Students.findOne({ email: req.body.email });
+let studentRegistrationNumber = await Students.findOne({registrationNumber: req.body.registrationNumber});
+      if (studentEmail) {
+        return res.status(400).json({ error: "Sorry this Email is already register on our portal" });
+      }
+if (studentRegistrationNumber){
+  return res.status(400).json({ error: "Sorry this Registration Number is already register on our portal" });
+}
+      const salt = await bcrypt.genSalt(10);
+      const secPass = await bcrypt.hash(req.body.password, salt);
 
-    const salt = await bcrypt.genSalt(10);
-    const secPass = await bcrypt.hash(req.body.password, salt);
-    Students.create({
-      name: req.body.name,
-      degree: req.body.degree,
-      registrationNumber: req.body.registrationNumber,
-      email: req.body.email,
-      password: secPass,
-    })
-      .then((Students) => res.json(Students))
-      .catch((err) => {
-        console.log(err);
-        res.json({
-          error: "Please enter a unique value",
-          message: err.message,
-        });
+      //creating new student
+      student = await Students.create({
+        name: req.body.name,
+        degree: req.body.degree,
+        registrationNumber: req.body.registrationNumber,
+        email: req.body.email,
+        password: secPass,
       });
+      const data = {
+        student: {
+          id: Students.id,
+        },
+      };
+
+      const authToken = jwt.sign(data, JWT_SECRET);
+      res.json(authToken);
+    } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Some Error Occured");
+    }
   }
 );
 
