@@ -1,20 +1,21 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
-const UserSchema = new Schema({
+const TeachersSchema = new Schema({
   name: {
     type: String,
     required: true,
   },
-  degree: {
+  specialization: {
     type: String,
-    required: true,
   },
-  registrationNumber: {
+  teacherID: {
     type: Number,
     required: true,
+    unique: true,
   },
   email: {
     type: String,
+    unique: true,
   },
   password: {
     type: String,
@@ -25,6 +26,5 @@ const UserSchema = new Schema({
     default: Date.now,
   },
 });
-const User = mongoose.model('user', UserSchema);
-User.createIndexes();
-module.exports = User;
+
+module.exports = mongoose.model("Teachers", TeachersSchema);

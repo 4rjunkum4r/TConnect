@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const mongoURI = "mongodb://localhost:27017/TConnect"
+const mongoURI = "mongodb://localhost:27017/tconnect"
 
 const connectToMongo = ()=>{
     mongoose.connect(mongoURI, ()=>{

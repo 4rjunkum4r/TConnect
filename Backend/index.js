@@ -3,7 +3,8 @@ const express = require('express')
 
 connectToMongo();
 const app = express()
-const port = 3000
+//Since our react app will use port 3000 so here we are using port 5000
+const port = 5000
 
 //Middleman used here
 
@@ -11,7 +12,9 @@ app.use(express.json())
 
 // Available Routes
 
-app.use('/api/auth', require('./routes/auth.js'))
+app.use('/api/studentsAuth', require('./routes/studentsAuth.js'))
+
+app.use('/api/teachersAuth', require('./routes/teachersAuth.js'))
 
 
 app.get('/', (req, res) => {
