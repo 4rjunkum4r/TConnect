@@ -12,7 +12,7 @@ app.use(express.json())
 
 // Available Routes
 
-app.use('/api/auth/createStudents', require('./routes/createStudents.js'))
+app.use('/api/auth', require('./routes/students.js'))
 
 app.listen(port, () => {
   console.log(`Example app listening on http://localhost:${port}`)
