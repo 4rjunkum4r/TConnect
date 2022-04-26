@@ -1,6 +1,7 @@
 //Calling and asssging the javascript component
 const express = require("express");
-const Students = require("../models/Students");
+const Student = require("../models/Student");
+const fetchStudentData = require("../middleware/fetchStudentData");
 const router = express.Router();
 const { body, validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
@@ -34,8 +35,8 @@ router.post(
     } //If the error in isEmpty is found then it will return an error message
     try {
       //checking email and registration is exist or  not since it will be asyncronised therefore await call is used here
-      let studentEmail = await Students.findOne({ email: req.body.email });
-      let studentRegistrationNumber = await Students.findOne({
+      let studentEmail = await Student.findOne({ email: req.body.email });
+      let studentRegistrationNumber = await Student.findOne({
         registrationNumber: req.body.registrationNumber,
       });
       if (studentEmail) {
@@ -57,7 +58,7 @@ router.post(
       const secPass = await bcrypt.hash(req.body.password, salt);
 
       //creating new student if no student exist before
-      student = await Students.create({
+      student = await Student.create({
         name: req.body.name,
         degree: req.body.degree,
         registrationNumber: req.body.registrationNumber,
@@ -68,7 +69,7 @@ router.post(
 
       const data = {
         student: {
-          is: Students.id,
+          is: Student.id,
         },
       };
       const authToken = jwt.sign(data, JWT_SECRET);
@@ -104,7 +105,7 @@ router.post(
 
     const { registrationNumber, password } = req.body;
     try {
-      let student = await Students.findOne( {registrationNumber});
+      let student = await Student.findOne({ registrationNumber });
       if (!student) {
         return res
           .status(400)
@@ -121,7 +122,7 @@ router.post(
       }
       const data = {
         student: {
-          is: Students.id,
+          is: Student.id,
         },
       };
 
@@ -136,21 +137,14 @@ router.post(
 // Route-3: Get loggedIn student details using :POST " /api/auth/getstudent". Login requires
 
 router.post(
-  //Setting a router path
-  "/login",
-  [
-    //Validating a schema through Express-Validator
-    body(
-      "registrationNumber",
-      "Please enter a valid Registration Number"
-    ).isLength({ min: 8 }),
-    body("email", "Please enter a valid Email").isEmail(),
-    body("password", "Password cannot be blank").exists(),
-  ],
+  //Setting a router path or end points
+  "/getStudentData",
+  fetchStudentData, // fetching the student data as acting as middleware
   async (req, res) => {
     try {
-      studentId = "details";
-      const student = await Students.findById(studentId).select("-password");
+      studentId = req.student.id;
+      const student = await Student.findById(studentId).select("-password");
+      res.status(200).send(student);
     } catch (error) {
       console.error(error.message);
       res.status(500).send("Internal server error");
