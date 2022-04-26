@@ -12,14 +12,7 @@ app.use(express.json())
 
 // Available Routes
 
-app.use('/api/studentsAuth', require('./routes/studentsAuth.js'))
-
-app.use('/api/teachersAuth', require('./routes/teachersAuth.js'))
-
-
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+app.use('/api/auth/createStudents', require('./routes/createStudents.js'))
 
 app.listen(port, () => {
   console.log(`Example app listening on http://localhost:${port}`)

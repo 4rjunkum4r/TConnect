@@ -2,6 +2,7 @@ const express = require("express");
 const Students = require("../models/Students");
 const router = express.Router();
 const { body, validationResult } = require("express-validator");
+const bcrypt = require("bcryptjs");
 
 //Create a user using: POST "/api/auth/". Doesn't require Auth
 
@@ -17,25 +18,28 @@ router.post(
     body("password").isLength({ min: 8 }),
   ],
   async (req, res) => {
-    //If there's any errors, return "BAD REQUEST" and "ERRORS"
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
-// Checking whether the any value matches to current input
-    let Students = Students.findOne({registrationNumber: req.body.registrationNumber},{email: req.body.email});
-    if (Students){
-      return req.status(400).json({error:"Sorry a student with this registration number or email already exits"})
-    }
-    
-    Students = await Students.create({
+
+    const salt = await bcrypt.genSalt(10);
+    const secPass = await bcrypt.hash(req.body.password, salt);
+    Students.create({
       name: req.body.name,
       degree: req.body.degree,
       registrationNumber: req.body.registrationNumber,
       email: req.body.email,
-      password: req.body.password,
+      password: secPass,
     })
-
+      .then((Students) => res.json(Students))
+      .catch((err) => {
+        console.log(err);
+        res.json({
+          error: "Please enter a unique value",
+          message: err.message,
+        });
+      });
   }
 );
 
