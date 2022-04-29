@@ -1,12 +1,13 @@
 //Calling and asssging the javascript component
 const express = require("express");
-const Student = require("../models/Student");
-const fetchStudentData = require("../middleware/fetchStudentData");
 const router = express.Router();
 const { body, validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const JWT_SECRET = "ProtectionofData";
+const Student = require("../models/Student");
+const studentData = require("../middleware/studentData");
+const JWT_SECRET_Student = "ProtectionofStudent"; //Custom variable for salting of hash fuctions
+
 
 //Create a user using: POST "/api/auth/createStudent". NO authentication requires sinnce it is a new student registering here
 
@@ -72,7 +73,7 @@ router.post(
           is: Student.id,
         },
       };
-      const authToken = jwt.sign(data, JWT_SECRET);
+      const authToken = jwt.sign(data, JWT_SECRET_Student);
       res.json(authToken);
     } catch (error) {
       console.error(error.message);
@@ -81,19 +82,18 @@ router.post(
   }
 );
 
-//Authenticating a student using : POST "/api/auth/login". NO login required
+//Authenticating a student using : POST "/api/auth/studentLogin". NO login required
 
-// Route-2
+// Route-3
 router.post(
   //Setting a router path
-  "/login",
+  "/studentLogin",
   [
     //Validating a schema through Express-Validator
     body(
       "registrationNumber",
       "Please enter a valid Registration Number"
     ).isLength({ min: 8 }),
-    body("email", "Please enter a valid Email").isEmail(),
     body("password", "Password cannot be blank").exists(),
   ],
   async (req, res) => {
@@ -126,7 +126,7 @@ router.post(
         },
       };
 
-      const authToken = jwt.sign(data, JWT_SECRET);
+      const authToken = jwt.sign(data, JWT_SECRET_Student);
       res.json(authToken);
     } catch (error) {
       console.error(error.message);
@@ -134,21 +134,23 @@ router.post(
     }
   }
 );
-// Route-3: Get loggedIn student details using :POST " /api/auth/getstudent". Login requires
+
+
+// Route-5: Get loggedIn student details using :POST " /api/auth/getstudent". Login requires
 
 router.post(
   //Setting a router path or end points
-  "/getStudentData",
-  fetchStudentData, // fetching the student data as acting as middleware
+  "/studentData",studentData, // fetching the student data as acting as middleware
   async (req, res) => {
     try {
-      studentId = req.student.id;
+      let studentId = req.student.id;
       const student = await Student.findById(studentId).select("-password");
-      res.status(200).send(student);
+      res.send(student);
     } catch (error) {
       console.error(error.message);
       res.status(500).send("Internal server error");
     }
   }
 );
+
 module.exports = router;

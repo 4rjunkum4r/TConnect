@@ -7,7 +7,6 @@ const StudentSchema = new Schema({
   },
   degree: {
     type: String,
-    required: true,
   },
   registrationNumber: {
     type: Number,
