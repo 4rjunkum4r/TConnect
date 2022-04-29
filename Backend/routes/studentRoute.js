@@ -143,8 +143,7 @@ router.post(
   "/studentData",studentData, // fetching the student data as acting as middleware
   async (req, res) => {
     try {
-      let studentId = req.student.id;
-      const student = await Student.findById(studentId).select("-password");
+      const student = await Student.findByOne(req.student.id).select("-password");
       res.send(student);
     } catch (error) {
       console.error(error.message);

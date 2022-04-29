@@ -78,7 +78,7 @@ router.post(
     }
   }
 );
-// Route-4
+// Route-2
 router.post(
   //Setting a router path
   "/teacherLogin",
@@ -125,15 +125,14 @@ router.post(
     }
   }
 );
-// Route-6: Get loggedIn teachers details using :POST " /api/auth/getTeacherData". Login requires
+// Route-3: Get loggedIn teachers details using :POST " /api/auth/getTeacherData". Login requires
 router.post(
   //Setting a router path or end points
   "/teacherData",
   teacherData, // fetching the student data as acting as middleware
   async (req, res) => {
     try {
-      teacherId = req.teacher.id;
-      const teacher = await Teacher.findById(teacherId).select("-password");
+      const teacher = await Teacher.findOne(req.teacher.id).select("-password");
       res.send(teacher);
     } catch (error) {
       console.error(error.message);
