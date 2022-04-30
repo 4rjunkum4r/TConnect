@@ -130,6 +130,7 @@
 .btn-profile {
     border-color: #ff0000;
     border-radius: 10px;
+    background-color: #01ec3c;
 }
 
 .btn:hover {

@@ -81,11 +81,363 @@ function Navbar() {
   );
 }
 function Profile() {
-    fetch('http://localhost:5000/api/teacher/teacherData')
-  .then(response => response.json())
-  .then(data => console.log(data));
   return (
-    <></>
+    <div className="container-fluid my-4">
+      <div className="row my-1">
+        <div className="col mx-1 my-1">
+          <div className="card">
+            <img
+              className="card-img-top"
+              src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png"
+              alt=""
+            />
+            <div className="card-body">
+              <h5 className="card-title">Priyanka Athia</h5>
+                <ul>
+              <p className="card-text">
+                  <li>DBMS</li>
+                  <li>SQL</li>
+                  <li>BACKEND</li>
+              </p>
+                </ul>
+              <div className="container">
+                <div className="row ">
+                  <div className="col-auto me-auto my-1">
+                  <a className="btn btn-profile btn-primary" href="tel:8665562570" role="button">Call the Teacher</a>
+                  </div>
+                  <div className="col-auto ms-auto my-1">
+                    <a className="btn btn-profile btn-primary" href="https://wa.me/917076279481" role="button">Whatsapp the Teacher</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col mx-1 my-1">
+        <div className="card">
+            <img
+              className="card-img-top"
+              src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png"
+              alt=""
+            />
+            <div className="card-body">
+              <h5 className="card-title">Priyanka Athia</h5>
+                <ul>
+              <p className="card-text">
+                  <li>DBMS</li>
+                  <li>SQL</li>
+                  <li>BACKEND</li>
+              </p>
+                </ul>
+              <div className="container">
+                <div className="row ">
+                  <div className="col-auto me-auto my-1">
+                  <a className="btn btn-profile btn-primary" href="tel:8665562570" role="button">Call the Teacher</a>
+                  </div>
+                  <div className="col-auto ms-auto my-1">
+                    <a className="btn btn-profile btn-primary" href="https://wa.me/917076279481" role="button">Whatsapp the Teacher</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col mx-1 my-1">
+        <div className="card">
+            <img
+              className="card-img-top"
+              src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png"
+              alt=""
+            />
+            <div className="card-body">
+              <h5 className="card-title">Priyanka Athia</h5>
+                <ul>
+              <p className="card-text">
+                  <li>DBMS</li>
+                  <li>SQL</li>
+                  <li>BACKEND</li>
+              </p>
+                </ul>
+              <div className="container">
+                <div className="row ">
+                  <div className="col-auto me-auto my-1">
+                  <a className="btn btn-profile btn-primary" href="tel:8665562570" role="button">Call the Teacher</a>
+                  </div>
+                  <div className="col-auto ms-auto my-1">
+                    <a className="btn btn-profile btn-primary" href="https://wa.me/917076279481" role="button">Whatsapp the Teacher</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col mx-1 my-1">
+        <div className="card">
+            <img
+              className="card-img-top"
+              src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png"
+              alt=""
+            />
+            <div className="card-body">
+              <h5 className="card-title">Priyanka Athia</h5>
+                <ul>
+              <p className="card-text">
+                  <li>DBMS</li>
+                  <li>SQL</li>
+                  <li>BACKEND</li>
+              </p>
+                </ul>
+              <div className="container">
+                <div className="row ">
+                  <div className="col-auto me-auto my-1">
+                  <a className="btn btn-profile btn-primary" href="tel:8665562570" role="button">Call the Teacher</a>
+                  </div>
+                  <div className="col-auto ms-auto my-1">
+                    <a className="btn btn-profile btn-primary" href="https://wa.me/917076279481" role="button">Whatsapp the Teacher</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col mx-1 my-1">
+          <div className="card">
+            <img
+              className="card-img-top"
+              src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png"
+              alt=""
+            />
+            <div className="card-body">
+              <h5 className="card-title">Priyanka Athia</h5>
+                <ul>
+              <p className="card-text">
+                  <li>DBMS</li>
+                  <li>SQL</li>
+                  <li>BACKEND</li>
+              </p>
+                </ul>
+              <div className="container">
+                <div className="row ">
+                  <div className="col-auto me-auto my-1">
+                  <a className="btn btn-profile btn-primary" href="tel:8665562570" role="button">Call the Teacher</a>
+                  </div>
+                  <div className="col-auto ms-auto my-1">
+                    <a className="btn btn-profile btn-primary" href="https://wa.me/917076279481" role="button">Whatsapp the Teacher</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col mx-1 my-1">
+        <div className="card">
+            <img
+              className="card-img-top"
+              src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png"
+              alt=""
+            />
+            <div className="card-body">
+              <h5 className="card-title">Priyanka Athia</h5>
+                <ul>
+              <p className="card-text">
+                  <li>DBMS</li>
+                  <li>SQL</li>
+                  <li>BACKEND</li>
+              </p>
+                </ul>
+              <div className="container">
+                <div className="row ">
+                  <div className="col-auto me-auto my-1">
+                  <a className="btn btn-profile btn-primary" href="tel:8665562570" role="button">Call the Teacher</a>
+                  </div>
+                  <div className="col-auto ms-auto my-1">
+                    <a className="btn btn-profile btn-primary" href="https://wa.me/917076279481" role="button">Whatsapp the Teacher</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col mx-1 my-1">
+        <div className="card">
+            <img
+              className="card-img-top"
+              src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png"
+              alt=""
+            />
+            <div className="card-body">
+              <h5 className="card-title">Priyanka Athia</h5>
+                <ul>
+              <p className="card-text">
+                  <li>DBMS</li>
+                  <li>SQL</li>
+                  <li>BACKEND</li>
+              </p>
+                </ul>
+              <div className="container">
+                <div className="row ">
+                  <div className="col-auto me-auto my-1">
+                  <a className="btn btn-profile btn-primary" href="tel:8665562570" role="button">Call the Teacher</a>
+                  </div>
+                  <div className="col-auto ms-auto my-1">
+                    <a className="btn btn-profile btn-primary" href="https://wa.me/917076279481" role="button">Whatsapp the Teacher</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col mx-1 my-1">
+        <div className="card">
+            <img
+              className="card-img-top"
+              src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png"
+              alt=""
+            />
+            <div className="card-body">
+              <h5 className="card-title">Priyanka Athia</h5>
+                <ul>
+              <p className="card-text">
+                  <li>DBMS</li>
+                  <li>SQL</li>
+                  <li>BACKEND</li>
+              </p>
+                </ul>
+              <div className="container">
+                <div className="row ">
+                  <div className="col-auto me-auto my-1">
+                  <a className="btn btn-profile btn-primary" href="tel:8665562570" role="button">Call the Teacher</a>
+                  </div>
+                  <div className="col-auto ms-auto my-1">
+                    <a className="btn btn-profile btn-primary" href="https://wa.me/917076279481" role="button">Whatsapp the Teacher</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col mx-1 my-1">
+          <div className="card">
+            <img
+              className="card-img-top"
+              src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png"
+              alt=""
+            />
+            <div className="card-body">
+              <h5 className="card-title">Priyanka Athia</h5>
+                <ul>
+              <p className="card-text">
+                  <li>DBMS</li>
+                  <li>SQL</li>
+                  <li>BACKEND</li>
+              </p>
+                </ul>
+              <div className="container">
+                <div className="row ">
+                  <div className="col-auto me-auto my-1">
+                  <a className="btn btn-profile btn-primary" href="tel:8665562570" role="button">Call the Teacher</a>
+                  </div>
+                  <div className="col-auto ms-auto my-1">
+                    <a className="btn btn-profile btn-primary" href="https://wa.me/917076279481" role="button">Whatsapp the Teacher</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col mx-1 my-1">
+        <div className="card">
+            <img
+              className="card-img-top"
+              src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png"
+              alt=""
+            />
+            <div className="card-body">
+              <h5 className="card-title">Priyanka Athia</h5>
+                <ul>
+              <p className="card-text">
+                  <li>DBMS</li>
+                  <li>SQL</li>
+                  <li>BACKEND</li>
+              </p>
+                </ul>
+              <div className="container">
+                <div className="row ">
+                  <div className="col-auto me-auto my-1">
+                  <a className="btn btn-profile btn-primary" href="tel:8665562570" role="button">Call the Teacher</a>
+                  </div>
+                  <div className="col-auto ms-auto my-1">
+                    <a className="btn btn-profile btn-primary" href="https://wa.me/917076279481" role="button">Whatsapp the Teacher</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col mx-1 my-1">
+        <div className="card">
+            <img
+              className="card-img-top"
+              src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png"
+              alt=""
+            />
+            <div className="card-body">
+              <h5 className="card-title">Priyanka Athia</h5>
+                <ul>
+              <p className="card-text">
+                  <li>DBMS</li>
+                  <li>SQL</li>
+                  <li>BACKEND</li>
+              </p>
+                </ul>
+              <div className="container">
+                <div className="row ">
+                  <div className="col-auto me-auto my-1">
+                  <a className="btn btn-profile btn-primary" href="tel:8665562570" role="button">Call the Teacher</a>
+                  </div>
+                  <div className="col-auto ms-auto my-1">
+                    <a className="btn btn-profile btn-primary" href="https://wa.me/917076279481" role="button">Whatsapp the Teacher</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col mx-1 my-1">
+        <div className="card">
+            <img
+              className="card-img-top"
+              src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png"
+              alt=""
+            />
+            <div className="card-body">
+              <h5 className="card-title">Priyanka Athia</h5>
+                <ul>
+              <p className="card-text">
+                  <li>DBMS</li>
+                  <li>SQL</li>
+                  <li>BACKEND</li>
+              </p>
+                </ul>
+              <div className="container">
+                <div className="row ">
+                  <div className="col-auto me-auto my-1">
+                  <a className="btn btn-profile btn-primary" href="tel:8665562570" role="button">Call the Teacher</a>
+                  </div>
+                  <div className="col-auto ms-auto my-1">
+                    <a className="btn btn-profile btn-primary" href="https://wa.me/917076279481" role="button">Whatsapp the Teacher</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 function Footer() {
