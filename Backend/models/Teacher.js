@@ -7,6 +7,7 @@ const TeacherSchema = new Schema({
   },
   specialization: {
     type: String,
+    required: false,
   },
   teacherId: {
     type: Number,
@@ -20,6 +21,12 @@ const TeacherSchema = new Schema({
   password: {
     type: String,
     required: true,
+  },
+  phoneNumber: {
+    type: Number,
+  },
+  courses:{
+type: String,
   },
   date: {
     type: Date,

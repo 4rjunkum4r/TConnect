@@ -21,7 +21,8 @@ router.post(
       min: 5,
     }),
     body("email", "Enter a valid Email").isEmail(),
-    body("password").isLength({ min: 8 }),
+    body("password","Password must be 8 or more character length").isLength({ min: 8 }),
+    body("phoneNumber","Number should be of 10 digits").isLength({ min: 10 },{max:12}),
   ],
 
   //We will do asyncronisation call here

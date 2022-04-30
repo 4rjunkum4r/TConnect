@@ -8,7 +8,6 @@ const Student = require("../models/Student");
 const studentData = require("../middleware/studentData");
 const JWT_SECRET_Student = "ProtectionofStudent"; //Custom variable for salting of hash fuctions
 
-
 //Create a user using: POST "/api/auth/createStudent". NO authentication requires sinnce it is a new student registering here
 
 // Route-1
@@ -127,7 +126,8 @@ router.post(
       };
 
       const authToken = jwt.sign(data, JWT_SECRET_Student);
-      res.json(authToken);
+
+      res.status(200).json({ success: true, "auth-token": authToken });
     } catch (error) {
       console.error(error.message);
       res.status(500).send("Internal server error");
@@ -135,15 +135,15 @@ router.post(
   }
 );
 
-
 // Route-5: Get loggedIn student details using :POST " /api/auth/getstudent". Login requires
 
 router.post(
   //Setting a router path or end points
-  "/studentData",studentData, // fetching the student data as acting as middleware
+  "/studentData",
+  studentData, // fetching the student data as acting as middleware
   async (req, res) => {
     try {
-      const student = await Student.findByOne(req.student.id).select("-password");
+      const student = await Student.findOne(req.student.id).select("-password");
       res.send(student);
     } catch (error) {
       console.error(error.message);

@@ -171,3 +171,19 @@
     font-size: 50px;
     color: red;
 }
+
+.card-img-top{
+    border-radius: 300px;
+}
+
+.con-head{
+    background-color: #dbdf1e;
+    text-align: center;
+    border: 10px solid red;
+    border-radius: 10px;
+}
+
+.con-ul{
+    text-align: left;
+    list-style: none;
+}
