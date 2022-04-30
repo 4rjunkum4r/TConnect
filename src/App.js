@@ -68,9 +68,11 @@ function Navbar() {
           </ul>
           <ul className="navbar-nav">
             <li className="nav-item mx-1">
-              <button className="btn btn-success nav-item-custom" type="submit">
-                LogOut
-              </button>
+            <Link to="/">
+                <button className="btn btn-success nav-item-custom">
+                  LogOut
+                </button>
+              </Link>
             </li>
           </ul>
         </div>
@@ -86,7 +88,7 @@ function Profile() {
           <div className="card">
             <img
               className="card-img-top"
-              src="https://ums.lpu.in/lpuums/DisplayImageForPowerBi.aspx?id=203f52dc-8dc2-4af0-a71c-8fdf0208b61f"
+              src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png"
               alt=""
             />
             <div className="card-body">
@@ -473,6 +475,7 @@ function LogIn() {
     console.log(json);
     if (json.success) {
       localStorage.setItem("token", json.authtoken);
+      alert("You've logged In successfully. After clicking OK you will be redirected to Dashboard")
       navigate("/Home");
     } else {
       alert("False creds");
@@ -571,7 +574,8 @@ function Register() {
     console.log(json);
     if (json.success) {
       localStorage.setItem("token", json.authtoken);
-      navigate("/LogIn");
+      alert("You've successfully create an account. After clicking OK you will be redirected to Log In page");
+      navigate("/");
     } else {
       alert("The user with same REGISTRATION NUMBER or EMAIL is already registered to our database");
     }
@@ -604,6 +608,7 @@ function Register() {
                         type="text"
                         className="form-control"
                         placeholder="Enter Your Name"
+                        required
                       />
                     </div>
                     <div className="form-group">
@@ -617,6 +622,7 @@ function Register() {
                         type="text"
                         className="form-control"
                         placeholder="Enter Your degree"
+                        required
                       />
                     </div>
                     <div className="form-group">
@@ -630,6 +636,7 @@ function Register() {
                         type="text"
                         className="form-control"
                         placeholder="Enter Your  Registration number"
+                        required
                       />
                     </div>
                     <div className="form-group">
@@ -643,6 +650,7 @@ function Register() {
                         type="email"
                         className="form-control"
                         placeholder="Enter Your Email"
+                        required
                       />
                     </div>
                     <div className="form-group">
@@ -656,6 +664,8 @@ function Register() {
                         type="password"
                         className="form-control"
                         placeholder="Enter Your password"
+                        minLength={8}
+                        required
                       />
                     </div>
                     <div className="form-group">
@@ -669,6 +679,8 @@ function Register() {
                         type="password"
                         className="form-control"
                         placeholder="Confirm Your Password"
+                        minLength={8}
+                        required
                       />
                     </div>
                     <button type="submit" className="btn mx-2 my-2">

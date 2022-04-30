@@ -73,7 +73,7 @@ router.post(
         },
       };
       const authToken = jwt.sign(data, JWT_SECRET_Student);
-      res.json(authToken);
+      res.status(200).json({ success: true, "auth-token": authToken });
     } catch (error) {
       console.error(error.message);
       res.status(500).send("Internal server error");
