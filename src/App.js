@@ -81,8 +81,367 @@ function Navbar() {
   );
 }
 function Profile() {
-  
-return(<></>);
+  return (
+    <div className="container-fluid my-4">
+      <div className="row">
+        <div className="col mx-1 my-1">
+          <div className="card">
+            <img
+              className="card-img-top"
+              src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png"
+              alt=""
+            />
+            <div className="card-body">
+              <h5 className="card-title">Priyanka</h5>
+              <p className="card-text">
+                <ul>
+                  <li>DBMS</li>
+                  <li>SQL</li>
+                  <li>BACKEND</li>
+                </ul>
+              </p>
+              <div className="container">
+                <div className="row ">
+                  <div className="col-auto me-auto">
+                    <button
+                      className="btn btn-profile btn-primary"
+                      id="emailButton"
+                    >
+                      Write E-mail
+                    </button>
+                  </div>
+                  <div className="col-auto">
+                    <button
+                      className="btn btn-profile btn-primary"
+                      id="bookAnAppointment"
+                    >
+                      Whatsapp the Teacher
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col mx-1 my-1">
+          <div className="card">
+            <img
+              className="card-img-top"
+              src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png"
+              alt=""
+            />
+            <div className="card-body">
+              <h5 className="card-title">Dummy Teacher 1</h5>
+              <p className="card-text">
+                <ul>
+                  <li>Cyber Security</li>
+                  <li>Database</li>
+                  <li>Networking</li>
+                </ul>
+              </p>
+              <div className="container">
+                <div className="row ">
+                  <div className="col-auto me-auto">
+                    <button
+                      className="btn btn-profile btn-primary"
+                      id="emailButton"
+                    >
+                      Write E-mail
+                    </button>
+                  </div>
+                  <div className="col-auto">
+                    <button
+                      className="btn btn-profile btn-primary"
+                      id="bookAnAppointment"
+                    >
+                      Whatsapp the Teacher
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col mx-1 my-1">
+          <div className="card">
+            <img
+              className="card-img-top"
+              src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png"
+              alt=""
+            />
+            <div className="card-body">
+              <h5 className="card-title">Dummy Teacher 1</h5>
+              <p className="card-text">
+                <ul>
+                  <li>Cyber Security</li>
+                  <li>Database</li>
+                  <li>Networking</li>
+                </ul>
+              </p>
+              <div className="container">
+                <div className="row ">
+                  <div className="col-auto me-auto">
+                    <button
+                      className="btn btn-profile btn-primary"
+                      id="emailButton"
+                    >
+                      Write E-mail
+                    </button>
+                  </div>
+                  <div className="col-auto">
+                    <button
+                      className="btn btn-profile btn-primary"
+                      id="bookAnAppointment"
+                    >
+                      Whatsapp the Teacher
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col mx-1 my-1">
+          <div className="card">
+            <img
+              className="card-img-top"
+              src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png"
+              alt=""
+            />
+            <div className="card-body">
+              <h5 className="card-title">Dummy Teacher 1</h5>
+              <p className="card-text">
+                <ul>
+                  <li>Cyber Security</li>
+                  <li>Database</li>
+                  <li>Networking</li>
+                </ul>
+              </p>
+              <div className="container">
+                <div className="row ">
+                  <div className="col-auto me-auto">
+                    <button
+                      className="btn btn-profile btn-primary"
+                      id="emailButton"
+                    >
+                      Write E-mail
+                    </button>
+                  </div>
+                  <div className="col-auto">
+                    <button
+                      className="btn btn-profile btn-primary"
+                      id="bookAnAppointment"
+                    >
+                      Whatsapp the Teacher
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col mx-1 my-1">
+          <div className="card">
+            <img
+              className="card-img-top"
+              src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png"
+              alt=""
+            />
+            <div className="card-body">
+              <h5 className="card-title">Dummy Teacher 1</h5>
+              <p className="card-text">
+                <ul>
+                  <li>Cyber Security</li>
+                  <li>Database</li>
+                  <li>Networking</li>
+                </ul>
+              </p>
+              <div className="container">
+                <div className="row ">
+                  <div className="col-auto me-auto">
+                    <button
+                      className="btn btn-profile btn-primary"
+                      id="emailButton"
+                    >
+                      Write E-mail
+                    </button>
+                  </div>
+                  <div className="col-auto">
+                    <button
+                      className="btn btn-profile btn-primary"
+                      id="bookAnAppointment"
+                    >
+                      Whatsapp the Teacher
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col mx-1 my-1">
+          <div className="card">
+            <img
+              className="card-img-top"
+              src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png"
+              alt=""
+            />
+            <div className="card-body">
+              <h5 className="card-title">Dummy Teacher 1</h5>
+              <p className="card-text">
+                <ul>
+                  <li>Cyber Security</li>
+                  <li>Database</li>
+                  <li>Networking</li>
+                </ul>
+              </p>
+              <div className="container">
+                <div className="row ">
+                  <div className="col-auto me-auto">
+                    <button
+                      className="btn btn-profile btn-primary"
+                      id="emailButton"
+                    >
+                      Write E-mail
+                    </button>
+                  </div>
+                  <div className="col-auto">
+                    <button
+                      className="btn btn-profile btn-primary"
+                      id="bookAnAppointment"
+                    >
+                      Whatsapp the Teacher
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col mx-1 my-1">
+          <div className="card">
+            <img
+              className="card-img-top"
+              src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png"
+              alt=""
+            />
+            <div className="card-body">
+              <h5 className="card-title">Dummy Teacher 1</h5>
+              <p className="card-text">
+                <ul>
+                  <li>Cyber Security</li>
+                  <li>Database</li>
+                  <li>Networking</li>
+                </ul>
+              </p>
+              <div className="container">
+                <div className="row ">
+                  <div className="col-auto me-auto">
+                    <button
+                      className="btn btn-profile btn-primary"
+                      id="emailButton"
+                    >
+                      Write E-mail
+                    </button>
+                  </div>
+                  <div className="col-auto">
+                    <button
+                      className="btn btn-profile btn-primary"
+                      id="bookAnAppointment"
+                    >
+                      Whatsapp the Teacher
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col mx-1 my-1">
+          <div className="card">
+            <img
+              className="card-img-top"
+              src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png"
+              alt=""
+            />
+            <div className="card-body">
+              <h5 className="card-title">Dummy Teacher 1</h5>
+              <p className="card-text">
+                <ul>
+                  <li>Cyber Security</li>
+                  <li>Database</li>
+                  <li>Networking</li>
+                </ul>
+              </p>
+              <div className="container">
+                <div className="row ">
+                  <div className="col-auto me-auto">
+                    <button
+                      className="btn btn-profile btn-primary"
+                      id="emailButton"
+                    >
+                      Write E-mail
+                    </button>
+                  </div>
+                  <div className="col-auto">
+                    <button
+                      className="btn btn-profile btn-primary"
+                      id="bookAnAppointment"
+                    >
+                      Whatsapp the Teacher
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col mx-1 my-1">
+          <div className="card">
+            <img
+              className="card-img-top"
+              src="https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png"
+              alt=""
+            />
+            <div className="card-body">
+              <h5 className="card-title">Dummy Teacher 1</h5>
+              <p className="card-text">
+                <ul>
+                  <li>Cyber Security</li>
+                  <li>Database</li>
+                  <li>Networking</li>
+                </ul>
+              </p>
+              <div className="container">
+                <div className="row ">
+                  <div className="col-auto me-auto">
+                    <button
+                      className="btn btn-profile btn-primary"
+                      id="emailButton"
+                    >
+                      Write E-mail
+                    </button>
+                  </div>
+                  <div className="col-auto">
+                    <button
+                      className="btn btn-profile btn-primary"
+                      id="bookAnAppointment"
+                    >
+                      Whatsapp the Teacher
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 function Footer() {
   return (
@@ -194,7 +553,6 @@ function Register() {
     registrationNumber: "",
     email: "",
     password: "",
-    cpasswaord: "",
   });
   let navigate = useNavigate();
   const handleSubmit = async (e) => {
@@ -286,6 +644,7 @@ function Register() {
                         className="form-control"
                         placeholder="Enter Your  Registration number"
                         required
+                        minLength={8}
                       />
                     </div>
                     <div className="form-group">
@@ -313,21 +672,6 @@ function Register() {
                         type="password"
                         className="form-control"
                         placeholder="Enter Your password"
-                        minLength={8}
-                        required
-                      />
-                    </div>
-                    <div className="form-group">
-                      <span className="input-icon">
-                        <i className="fa-solid fa-key"></i>
-                      </span>
-                      <input
-                        name="cpassword"
-                        id="cpassword"
-                        onChange={onChange}
-                        type="password"
-                        className="form-control"
-                        placeholder="Confirm Your Password"
                         minLength={8}
                         required
                       />
@@ -437,7 +781,7 @@ function ContactUs() {
             <i className="fa-solid fa-envelope">
               {"    "}
               <strong>
-                <a href="mailto:tconnectcontactus@gmail.com">
+                <a href="mailto:kumararjundamai1999@gmail.com">
                   Send us an email
                 </a>
               </strong>

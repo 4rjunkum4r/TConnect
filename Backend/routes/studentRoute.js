@@ -83,7 +83,7 @@ router.post(
 
 //Authenticating a student using : POST "/api/auth/studentLogin". NO login required
 
-// Route-3
+// Route-2
 router.post(
   //Setting a router path
   "/studentLogin",
@@ -135,7 +135,7 @@ router.post(
   }
 );
 
-// Route-5: Get loggedIn student details using :POST " /api/auth/getstudent". Login requires
+// Route-3: Get loggedIn student details using :POST " /api/auth/getstudent". Login requires
 
 router.post(
   //Setting a router path or end points
