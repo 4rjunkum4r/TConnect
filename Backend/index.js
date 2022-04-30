@@ -15,6 +15,7 @@ app.use(express.json());
 // Available Routes
 
 app.use("/api/student", require("./routes/studentRoute.js"));
+app.use("/api/teacher", require("./routes/teacherRoute.js"));
 app.listen(port, () => {
   console.log(`Example app listening on http://localhost:${port}`);
 });
