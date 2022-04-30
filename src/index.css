@@ -162,8 +162,11 @@
     background-color: #6FDFDF;
     border: 10px solid rgb(2, 2, 192);
 }
-
+.card-text{
+ color: #001aff;
+}
 .nav-brand-img {
+    border-radius: 50px;
     width: 1.5cm;
     height: auto;
 }
@@ -174,7 +177,7 @@
 }
 
 .card-img-top{
-    border-radius: 300px;
+    border-radius: 100px;
 }
 
 .con-head{
