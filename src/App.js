@@ -10,7 +10,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LogIn />} />
-          <Route path="/SignUp" element={<SignUp />} />
+          <Route path="/Register" element={<Register />} />
           <Route path="/Home" element={<Home />} />
           <Route path="/ContactUs" element={<ContactUs />} />
         </Routes>
@@ -524,7 +524,7 @@ function LogIn() {
                     <button type="submit" className="btn mx-2 my-2">
                       LogIn
                     </button>
-                    <Link to="/SignUp">
+                    <Link to="/Register">
                       <button className="btn mx-2 my-2">
                         Click here to Register
                       </button>
@@ -539,7 +539,47 @@ function LogIn() {
     </div>
   );
 }
-function SignUp() {
+function Register() {
+  const [credentials, setCredentials] = useState({
+    name: "",
+    degree: "",
+    registrationNumber: "",
+    email: "",
+    password: "",
+    cpasswaord: "",
+  });
+  let navigate = useNavigate();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const response = await fetch(
+      "http://localhost:5000/api/student/createStudent",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: credentials.name,
+          degree: credentials.degree,
+          registrationNumber: credentials.registrationNumber,
+          email: credentials.email,
+          password: credentials.password,
+        }),
+      }
+    );
+    const json = await response.json();
+    console.log(json);
+    if (json.success) {
+      localStorage.setItem("token", json.authtoken);
+      navigate("/LogIn");
+    } else {
+      alert("The user with same REGISTRATION NUMBER or EMAIL is already registered to our database");
+    }
+  };
+
+  const onChange = (e) => {
+    setCredentials({ ...credentials, [e.target.name]: e.target.value });
+  };
   return (
     <div className="container modal-container">
       <div className="row">
@@ -552,34 +592,94 @@ function SignUp() {
                   <p className="description">
                     Register with your Registration Number & Password
                   </p>
-                  <div className="form-group">
-                    <span className="input-icon">
-                      <i className="fa fa-user"></i>
-                    </span>
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Enter registration number"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <span className="input-icon">
-                      <i className="fas fa-key"></i>
-                    </span>
-                    <input
-                      type="password"
-                      className="form-control"
-                      placeholder="Enter your password"
-                    />
-                  </div>
-                  <button id="myButton" className="btn mx-2 my-2">
-                    Register
-                  </button>
-                  <Link to="/">
-                    <button id="myButton" className="btn mx-2 my-2">
-                      Click here to LogIn
+                  <form onSubmit={handleSubmit}>
+                    <div className="form-group">
+                      <span className="input-icon">
+                        <i className="fa-solid fa-user"></i>
+                      </span>
+                      <input
+                        name="name"
+                        id="name"
+                        onChange={onChange}
+                        type="text"
+                        className="form-control"
+                        placeholder="Enter Your Name"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <span className="input-icon">
+                        <i className="fa-solid fa-graduation-cap"></i>
+                      </span>
+                      <input
+                        name="degree"
+                        id="degree"
+                        onChange={onChange}
+                        type="text"
+                        className="form-control"
+                        placeholder="Enter Your degree"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <span className="input-icon">
+                        <i className="fa-solid fa-id-card"></i>
+                      </span>
+                      <input
+                        name="registrationNumber"
+                        id="registrationNumber"
+                        onChange={onChange}
+                        type="text"
+                        className="form-control"
+                        placeholder="Enter Your  Registration number"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <span className="input-icon">
+                        <i className="fa-solid fa-at"></i>
+                      </span>
+                      <input
+                        name="email"
+                        id="email"
+                        onChange={onChange}
+                        type="email"
+                        className="form-control"
+                        placeholder="Enter Your Email"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <span className="input-icon">
+                        <i className="fa-solid fa-key"></i>
+                      </span>
+                      <input
+                        name="password"
+                        id="password"
+                        onChange={onChange}
+                        type="password"
+                        className="form-control"
+                        placeholder="Enter Your password"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <span className="input-icon">
+                        <i className="fa-solid fa-key"></i>
+                      </span>
+                      <input
+                        name="cpassword"
+                        id="cpassword"
+                        onChange={onChange}
+                        type="password"
+                        className="form-control"
+                        placeholder="Confirm Your Password"
+                      />
+                    </div>
+                    <button type="submit" className="btn mx-2 my-2">
+                      Register
                     </button>
-                  </Link>
+                    <Link to="/">
+                      <button className="btn mx-2 my-2">
+                        Click here to LogIn
+                      </button>
+                    </Link>
+                  </form>
                 </div>
               </div>
             </div>
