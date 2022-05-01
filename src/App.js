@@ -617,7 +617,7 @@ function LogIn() {
       );
       navigate("/Home");
     } else {
-      alert("Invalid Credentials");
+      alert("Invalid Credentials or Student is not registered yet. If not Register kindly click on second button.");
     }
   };
 
