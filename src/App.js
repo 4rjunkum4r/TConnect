@@ -47,7 +47,7 @@ function Navbar() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="fa fa-angle-double-down"></span>
+          <span className="fa-solid fa-grip-lines"></span>
         </button>
         <div className="navbar-collapse collapse position-relative" id="navbar">
           <ul className="navbar-nav me-auto">
@@ -174,7 +174,7 @@ function Profile() {
               alt=""
             />
             <div className="card-body">
-              <h1 className="card-title">Pranjal Jain</h1>
+              <h1 className="card-title">Pranjal Prem Jain</h1>
 
               <p className="card-text">
                 <strong>
