@@ -876,11 +876,11 @@ function ContactUs() {
             </ul>
             <ul className="navbar-nav">
               <li className="nav-item mx-1">
-              <Link to="/">
-                <button className="btn btn-success nav-item-custom">
-                  LogOut
-                </button>
-              </Link>
+                <Link to="/">
+                  <button className="btn btn-success nav-item-custom">
+                    LogOut
+                  </button>
+                </Link>
               </li>
             </ul>
           </div>
@@ -889,45 +889,45 @@ function ContactUs() {
       <h1 className="con-head">You could reach us in given Contact</h1>
       <div className="position-relative ">
         <ul className="con-ul">
-         
+
           <li className="mx-4 my-4">
-            
-              <strong><a href="tel:+91 7076279481">
+
+            <strong><a href="tel:+91 7076279481">
               <i className="fa-solid fa-square-phone">
-              {" "}</i>
-                </a> TEL: +91 7076279481</strong>
-            
+                {" "}</i>
+            </a> TEL: +91 7076279481</strong>
+
           </li>
           <li className="mx-4 my-4">
-            
-              <strong><a href="tel:+91 9646579230">
+
+            <strong><a href="tel:+91 9646579230">
               <i className="fa-solid fa-square-phone">
-              {" "}</i>
-                </a> TEL: +91 9646579230</strong>
-            
+                {" "}</i>
+            </a> TEL: +91 9646579230</strong>
+
           </li><li className="mx-4 my-4">
-            
+
             <strong><a href="tel:+91 9641234123">
-            <i className="fa-solid fa-square-phone">
-            {" "}</i>
-              </a> TEL: +91 9641234123</strong>
-          
-        </li>
-        <li className="mx-4 my-4">
-          
-            <strong><a href="tel:+91 7865342345">
-            <i className="fa-solid fa-square-phone">
-            {" "}</i>
-              </a> TEL: +91 7865342345</strong>
-          
-        </li>
+              <i className="fa-solid fa-square-phone">
+                {" "}</i>
+            </a> TEL: +91 9641234123</strong>
+
+          </li>
           <li className="mx-4 my-4">
-            
+
+            <strong><a href="tel:+91 7865342345">
+              <i className="fa-solid fa-square-phone">
+                {" "}</i>
+            </a> TEL: +91 7865342345</strong>
+
+          </li>
+          <li className="mx-4 my-4">
+
             <strong><a href="https://wa.me/917076279481">
-            <i className="fa-brands fa-whatsapp-square">
-            {" "}</i>
-              </a> WHATSAPP US</strong>
-              </li>
+              <i className="fa-brands fa-whatsapp-square">
+                {" "}</i>
+            </a> WHATSAPP US</strong>
+          </li>
         </ul>
       </div>
     </div>
